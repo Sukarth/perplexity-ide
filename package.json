@@ -116,7 +116,8 @@
     "vscode-regexpp": "^3.1.0",
     "vscode-textmate": "9.2.0",
     "yauzl": "^3.0.0",
-    "yazl": "^2.4.3"
+    "yazl": "^2.4.3",
+    "cycletls": "^1.0.26"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.2",

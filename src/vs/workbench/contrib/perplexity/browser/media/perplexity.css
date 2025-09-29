@@ -1,0 +1,166 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.perplexity-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 8px;
+}
+
+.auth-section {
+    margin-bottom: 16px;
+}
+
+.conversations-section {
+    margin-bottom: 16px;
+}
+
+.conversations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.conversations-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.conversations-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--vscode-widget-border);
+    border-radius: 4px;
+}
+
+.conversation-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--vscode-widget-border);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+
+.conversation-item:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+.conversation-item.selected {
+    background-color: var(--vscode-list-activeSelectionBackground);
+    color: var(--vscode-list-activeSelectionForeground);
+}
+
+.conversation-item:last-child {
+    border-bottom: none;
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid var(--vscode-widget-border);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 16px;
+    background-color: var(--vscode-editor-background);
+}
+
+.message {
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 85%;
+}
+
+.user-message {
+    background-color: var(--vscode-inputOption-activeBackground);
+    color: var(--vscode-inputOption-activeForeground);
+    margin-left: auto;
+    text-align: right;
+}
+
+.assistant-message {
+    background-color: var(--vscode-badge-background);
+    color: var(--vscode-badge-foreground);
+    margin-right: auto;
+}
+
+.message-content {
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.message-timestamp {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message-input {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px;
+    border: 1px solid var(--vscode-input-border);
+    border-radius: 4px;
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    font-family: var(--vscode-font-family);
+    font-size: 13px;
+    resize: vertical;
+}
+
+.message-input:focus {
+    outline: none;
+    border-color: var(--vscode-focusBorder);
+}
+
+.message-input::placeholder {
+    color: var(--vscode-input-placeholderForeground);
+}
+
+/* Button styles are handled by VS Code's default button styles */
+
+/* Scrollbar styling for chat container */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: var(--vscode-scrollbarSlider-background);
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: var(--vscode-scrollbarSlider-background);
+    border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: var(--vscode-scrollbarSlider-hoverBackground);
+}
+
+/* Responsive adjustments */
+@media (max-width: 300px) {
+    .message {
+        max-width: 95%;
+    }
+    
+    .conversations-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+}

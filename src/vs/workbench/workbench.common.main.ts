@@ -209,6 +209,9 @@ import './contrib/chat/browser/chat.contribution.js';
 import './contrib/inlineChat/browser/inlineChat.contribution.js';
 import './contrib/mcp/browser/mcp.contribution.js';
 
+// Perplexity AI
+import './contrib/perplexity/browser/perplexity.contribution.js';
+
 // Interactive
 import './contrib/interactive/browser/interactive.contribution.js';
 
